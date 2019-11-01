@@ -3,7 +3,7 @@ Supply Bot Source Code
 Run the following commands on your terminal to contribute to the project
 To install Python 3
 1. Start by updating the packages list and installing the prerequisites:
-   sudo apt update
+   ##sudo apt update
    sudo apt install software-properties-common
 2. Next, add the deadsnakes PPA to your sources list:
    sudo add-apt-repository ppa:deadsnakes/ppa
