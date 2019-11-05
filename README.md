@@ -23,7 +23,7 @@ To install Numpy:
 1. Type:
    ## pip3 install numpy
 
-
+### Change all the paths as per your needs of the files in the codes
 
 Contributions and Issues are highly welcomed. 
 Contribute in the Codes Folder in Image Processing and Video Processing Folders. 
