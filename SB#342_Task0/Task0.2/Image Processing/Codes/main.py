@@ -13,20 +13,8 @@ width=[bird.shape[1],cat.shape[1],flowers.shape[1],horse.shape[1]]
 channels=[bird.shape[2],cat.shape[2],flowers.shape[2],horse.shape[2]]
 dimensions=[bird.shape,cat.shape,flowers.shape,horse.shape]
 center=[bird[height[0]//2][width[0]//2],cat[height[1]//2][width[1]//2],flowers[height[2]//2][width[2]//2],horse[height[3]//2][width[3]//2]]
-"""cv.imshow('image',bird)
-cv.waitKey(10000)
-cv.destroyAllWindows()
-cv.imshow('image',cat)
-cv.waitKey(10000)
-cv.destroyAllWindows()
-cv.imshow('image',flowers)
-cv.waitKey(10000)
-cv.destroyAllWindows()
-cv.imshow('image', horse)
-cv.waitKey(10000)
-cv.destroyAllWindows()"""
 def partA():
-    with open('/home/aditya/eYantra/SB#342_Task0/Task0.2/Image Processing/Generated/stats.csv','w') as csvfile:
+    with open('/SB#342_Task0/Task0.2/Image Processing/Generated/stats.csv','w') as csvfile:
         filewriter = csv.writer(csvfile, delimiter=',',
                             quotechar='|', quoting=csv.QUOTE_MINIMAL)
         for i in range(0,4):
@@ -42,22 +30,22 @@ def partB():
     red=cat.copy()
     red[:,:,0]=0
     red[:,:,1]=0
-    cv.imwrite('/home/aditya/eYantra/SB#342_Task0/Task0.2/Image Processing/Generated/cat_red.jpg',red)
+    cv.imwrite('/SB#342_Task0/Task0.2/Image Processing/Generated/cat_red.jpg',red)
 
 def partC():
-    alpha=Image.open(r'/home/aditya/eYantra/SB#342_Task0/Task0.2/Image Processing/Images/flowers.jpg')
+    alpha=Image.open(r'/SB#342_Task0/Task0.2/Image Processing/Images/flowers.jpg')
     alpha.putalpha(128)
     """b,r,g=cv.split(flowers)
     a=np.ones(b.shape,dtype=b.dtype)*50
     brga=cv.merge((b,r,g,a))"""
-    alpha.save('/home/aditya/eYantra/SB#342_Task0/Task0.2/Image Processing/Generated/flowers_alpha.png')    
+    alpha.save('/SB#342_Task0/Task0.2/Image Processing/Generated/flowers_alpha.png')    
 
 def partD():
     h=horse
     for i in range(0,h.shape[0]):
         for j in range(0,h.shape[1]):
             h[i,j]=0.3*h[i,j,2]+0.59*h[i,j,1]+0.11*h[i,j,0]
-    cv.imwrite('/home/aditya/eYantra/SB#342_Task0/Task0.2/Image Processing/Generated/horse_gray.jpg',h)
+    cv.imwrite('/SB#342_Task0/Task0.2/Image Processing/Generated/horse_gray.jpg',h)
 
 partA()
 partB()
